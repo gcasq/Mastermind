@@ -101,6 +101,16 @@ function gerarDica(){
         document.getElementById("pause").onclick = null;
         document.getElementById("guia").innerHTML="Vitória! Você é um mestre de Game of Thrones! <br> Reinicie o jogo para jogar novamente.";
     }
+    if(vitoria!=4&&i==8){
+        document.getElementById("pause").onclick = null;
+        document.getElementById("guia").innerHTML="Você perdeu. <br> Reinicie o jogo para tentar novamente.";
+        ocu1.appendChild(intToGot(senha[0]));
+        ocu2.appendChild(intToGot(senha[1]));
+        ocu3.appendChild(intToGot(senha[2]));
+        ocu4.appendChild(intToGot(senha[3]));
+        document.getElementById("desistir").onclick = null;
+
+    }
 }
 
 function desistir(){
