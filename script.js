@@ -1,9 +1,9 @@
-//cor1: azul rgb(0,0,255)
-//cor2: amarelo rgb(255,255,0)
-//cor3: verde rgb(0,128,0)
-//cor4: rosa rgb(255,0,127)
-//cor5: roxo rgb(128,0,128)
-//cor6: azul-claro rgb(0,191,255)
+//personagem 1: arya
+//personagem 2: sam
+//personagem 3: ned
+//personagem 4: daenerys
+//personagem 5: jon
+//personagem 6: tyrion
 //preto: rgb(0,0,0)
 //vermelho: rgb(255,0,0)
 var i;var j;
@@ -18,34 +18,18 @@ var ocu2 =  document.getElementById("oc2");
 var ocu3 =  document.getElementById("oc3");
 var ocu4 =  document.getElementById("oc4");
 
-
-
 function iniciojogo(){
     i=1;j=1;
-    
     const oc1=Math.floor(Math.random() * 6) + 1;
-    ocu1.appendChild(intToGot(oc1));
-    console.log(intToGot(oc1));
-  //  document.getElementById("oc1").style.backgroundColor = intToRgb(oc1);
- //   document.getElementById("oc1").style.backgroundImage = "img";
-
     const oc2=Math.floor(Math.random() * 6) + 1;
-    ocu2.appendChild(intToGot(oc2));
-    console.log(intToGot(oc2));
-
-   // document.getElementById("oc2").style.backgroundColor = intToRgb(oc2);
     const oc3=Math.floor(Math.random() * 6) + 1;
-    ocu3.appendChild(intToGot(oc3));
-    console.log(intToGot(oc3));
-
- //  document.getElementById("oc3").style.backgroundColor = intToRgb(oc3);
     const oc4=Math.floor(Math.random() * 6) + 1; 
-    ocu4.appendChild(intToGot(oc4));
-    console.log(intToGot(oc4));
-
-  //  document.getElementById("oc4").style.backgroundColor = intToRgb(oc4);
     gridResp=[oc1,oc2,oc3,oc4];
-    console.log(gridResp);
+    document.getElementById("containerright").style.backgroundColor="rgb(0,0,0)";
+    document.getElementById("oc1").style.borderColor="rgb(0,0,0)";
+    document.getElementById("oc2").style.borderColor="rgb(0,0,0)";
+    document.getElementById("oc3").style.borderColor="rgb(0,0,0)";
+    document.getElementById("oc4").style.borderColor="rgb(0,0,0)";
     var o;
     for(o in gridResp){
         console.log(gridResp[o]);
@@ -53,22 +37,15 @@ function iniciojogo(){
     }
     document.getElementById("j11").innerHTML="x";
     entraloop(i,j);
-
+    document.getElementById("iniciar").onclick = null;
 }
-
-
 function entraloop(i,j){
-    
     document.getElementById("j"+i+j).innerHTML="x";
-    
 }
 function next(){
-
     cor = document.getElementById("seletor").value;
     if(cor==-1){return;}
     document.getElementById("j"+i+j).innerHTML="";
-
- //   document.getElementById("j"+i+j).style.backgroundColor = intToRgb(cor);
     document.getElementById("j"+i+j).appendChild(intToGot(cor));
     gridTentativa[j-1]=cor;
     if(j<4){j=j+1;}
@@ -117,18 +94,23 @@ function dica(){
         pretas--;
     }
     if(vitoria==4){
-        alert("Vitória!!!!");
+        ocu1.appendChild(intToGot(gridResp[0]));
+        ocu2.appendChild(intToGot(gridResp[1]));
+        ocu3.appendChild(intToGot(gridResp[2]));
+        ocu4.appendChild(intToGot(gridResp[3]));
+        document.getElementById("pause").onclick = null;
+        document.getElementById("guia").innerHTML="Vitória! Você é um mestre de Game of Thrones! <br> Reinicie o jogo para jogar novamente.";
     }
 }
 
-
-function intToRgb(x) {
-    if(x==1){return "rgb(0,0,255)";}
-    if(x==2){return "rgb(255,255,0)";}
-    if(x==3){return "rgb(0,128,0)";}
-    if(x==4){return "rgb(255,0,127)";}
-    if(x==5){return "rgb(128,0,128)";}
-    if(x==6){return "rgb(0,191,255)";}
+function desistir(){
+    ocu1.appendChild(intToGot(gridResp[0]));
+    ocu2.appendChild(intToGot(gridResp[1]));
+    ocu3.appendChild(intToGot(gridResp[2]));
+    ocu4.appendChild(intToGot(gridResp[3]));
+    document.getElementById("pause").onclick = null;
+    document.getElementById("pause").innerHTML="Você deve reiniciar o jogo antes de escolher os personagens.";
+    document.getElementById("guia").innerHTML="Você desistiu.<br>Que pena! Tente novamente, clicando em Reiniciar Jogo.";
 }
 
 function intToGot(x) {

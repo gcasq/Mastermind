@@ -1,18 +1,15 @@
-body{
-}
-
 #botao_inicio{
     margin-top: 30px;
 }
 
-
-.containerb{
+.coluna{
     height: 380px;
     width: 8%;
     border: 1px solid rgb(143, 139, 139);
     margin: 0 auto;
     margin-top: 10px;
     margin-left: 10px;
+    background-color: rgb(243, 133, 30);
 }
 
 .containerleft{
@@ -45,19 +42,18 @@ body{
 
 
 
-#container{
+#tabuleiro{
     width: 1000px;
     border: 1px solid rgb(143, 139, 139);
     margin: auto;
     height: 400px;
     margin-top: 100px;
     border-radius: 5%;
-
+    background-color: rgb(12, 67, 131);
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
     justify-content: space-between;
-
 }
 
 .pinos_menores{
@@ -90,7 +86,23 @@ body{
     flex-direction: column;
     text-align: center;
     line-height: 2.5;
+    background-color: rgb(255, 255, 255);
+}
 
+#containercima{
+    display: flex;
+    flex-direction: row;
+}
+
+.maioresoc{
+    border: 1px solid rgb(143, 139, 139);
+    border-radius: 100%;
+    height: 100%;
+    margin: 10px 5px 10px 5px;
+    display: flex;                  /* establish flex container */
+    flex-direction: column;
+    text-align: center;
+    line-height: 2.5;
 }
 
 img{
@@ -99,9 +111,7 @@ img{
     object-fit: cover;
     border-radius: 100%;
     overflow: hidden;
-    
 }
-
 
 .menores1{
     margin: 3px;
@@ -116,8 +126,8 @@ img{
     border: 1px solid rgb(143, 139, 139);
     margin: 2px;
     float: right;
+    background-color: rgb(255, 255, 255);
 }
 #clear {
     clear: both;
 }
-
