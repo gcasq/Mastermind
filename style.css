@@ -1,0 +1,123 @@
+body{
+}
+
+#botao_inicio{
+    margin-top: 30px;
+}
+
+
+.containerb{
+    height: 380px;
+    width: 8%;
+    border: 1px solid rgb(143, 139, 139);
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.containerleft{
+    height: 380px;
+    width: 8%;
+    border: 1px solid rgb(143, 139, 139);
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#containerright{
+    height: 380px;
+    width: 8%;
+    border: 1px solid rgb(143, 139, 139);
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.bigger_card2{
+    width: 500px;
+    border: 1px solid rgb(143, 139, 139);
+    float: right;
+    margin: 10px 5px 10px 5px;
+    padding: 15px;
+    height: 350px;
+}
+
+
+
+#container{
+    width: 1000px;
+    border: 1px solid rgb(143, 139, 139);
+    margin: auto;
+    height: 400px;
+    margin-top: 100px;
+    border-radius: 5%;
+
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between;
+
+}
+
+.pinos_menores{
+    height: 70px;
+    margin: 10px 5px 10px 5px;
+    display: flex;                  /* establish flex container */
+    flex-direction: column;
+}
+
+.pinos_maiores{
+    height: 250px;
+    margin: 10px 5px 10px 5px;
+    display: flex;                  /* establish flex container */
+    flex-direction: column;
+}
+
+#pinos_ocultos{
+    height: 250px;
+    margin: 90px 5px 10px 5px;
+    display: flex;                  /* establish flex container */
+    flex-direction: column;
+}
+
+.maiores{
+    border: 1px solid rgb(143, 139, 139);
+    border-radius: 100%;
+    height: 100%;
+    margin: 10px 5px 10px 5px;
+    display: flex;                  /* establish flex container */
+    flex-direction: column;
+    text-align: center;
+    line-height: 2.5;
+
+}
+
+img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    overflow: hidden;
+    
+}
+
+
+.menores1{
+    margin: 3px;
+    height: 100%;
+    display: flex;                  /* establish flex container */
+    flex-direction: row;
+}
+
+.menores2{
+    width: 100%;
+    border-radius: 100%;
+    border: 1px solid rgb(143, 139, 139);
+    margin: 2px;
+    float: right;
+}
+#clear {
+    clear: both;
+}
+
